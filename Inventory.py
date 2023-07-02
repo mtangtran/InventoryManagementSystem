@@ -6,10 +6,8 @@ class Inventory:
         self.item_id = 0
 
     def addInventory(self, item, quantity):
-
         if item in self.item_id:
             self.inventory[item] = quantity
-
         else:
             self.inventory[item] = quantity
 
