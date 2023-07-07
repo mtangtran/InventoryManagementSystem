@@ -26,9 +26,10 @@ class InventoryPrediction:
 
         return reqList
 
-    def clearRequirements(self):
+    def clearEverything(self):
         self.requirements = []
-
+        self.totalItems=0
+        self.predictions=[]
     def updateRequirements(self, item, date, quantity):
         for i in range(len(self.requirements)):
             if self.requirements[i][0] == date and self.requirements[i][1] == item and self.requirements[i][2] == quantity:
