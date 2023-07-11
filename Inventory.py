@@ -5,6 +5,7 @@ class Inventory:
         self.storageSpaceName = name
         self.item_id = 1
         self.totalCost = 0
+        self.temp=0
     def addInventory(self, item, quantity, cost):
         if item in self.inventory:
             self.inventory[item] = (self.item_id, quantity)
@@ -37,3 +38,9 @@ class Inventory:
 
     def getRecentItemID(self):
         return self.item_id
+
+    def setTemp(self, temp):
+        self.temp = temp
+
+    def getTemp(self):
+        return self.temp
