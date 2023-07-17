@@ -41,3 +41,11 @@ class InventoryPrediction:
         if self.totalItems < len(self.requirements):
             flag= True
         return flag
+
+    def checkThreshold(self, threshold):
+        flag = False
+        for i in range(len(self.requirements)):
+            if self.requirements[i] > threshold:
+                flag = True
+
+        return flag
