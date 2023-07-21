@@ -4,6 +4,7 @@ class Management:
         self.managers = []
         self.storageSpaces = {}
 
+
     def addManagers(self, manager):
         self.managers.append(manager)
 
@@ -15,6 +16,10 @@ class Management:
             if self.managers[i]==manager:
                 self.managers.remove(manager)
 
+    def updateManager(self, manager, change):
+        for i in range(len(self.managers)):
+            if self.managers[i]== manager:
+                self.managers[i] = change
     def getStorageSpace(self):
         return self.storageSpaces
 
