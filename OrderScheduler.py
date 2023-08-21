@@ -3,6 +3,7 @@ class OrderScheduler:
     def __init__(self):
         self.orders = {}
         self.NumberedOrdered=0
+        self.warehouseFlow = {}
     def getOrders(self):
         return self.NumberedOrdered
 
@@ -22,3 +23,15 @@ class OrderScheduler:
 
     def deleteAllOrders(self):
         self.orders = {}
+
+    def addIntakeOutake(self, date, intake, outTake):
+        self.warehouseFlow[date] = (intake, outTake)
+
+    def getWarehouseNumbers(self):
+        return self.warehouseFlow
+
+    def getSpecificDate(self, date):
+        if date in self.warehouseFlow:
+            return self.warehouseFlow
+        else:
+            return None

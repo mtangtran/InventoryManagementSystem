@@ -4,6 +4,7 @@ class InventoryPrediction:
         self.past = []
         self.totalItems = 0
         self.requirements = []
+
     def createPrediction(self):
         self.predictions = []
 
