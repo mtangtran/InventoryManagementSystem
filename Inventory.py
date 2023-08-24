@@ -6,6 +6,7 @@ class Inventory:
         self.item_id = 1
         self.totalCost = 0
         self.temp=0
+        self.expectedLosses = 0
     def addInventory(self, item, quantity, cost):
         if item in self.inventory:
             self.inventory[item] = (self.item_id, quantity)
@@ -44,3 +45,10 @@ class Inventory:
 
     def getTemp(self):
         return self.temp
+
+    def setExpectedLosses(self, loss):
+        self.expectedLosses += loss
+
+
+    def getExpectedLoss(self):
+        return self.expectedLosses
